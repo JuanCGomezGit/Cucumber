@@ -22,12 +22,12 @@ public class LoginPage extends CommonMethods {
     public LoginPage(){
         PageFactory.initElements(driver, this);
     }
-
+/*
     public void login(String username, String password){
         sendText(usernameTextBox, username);
         sendText(passwordTextBox, password);
         click(loginButton);
-    }
+    }*/
 
 
 }

@@ -13,7 +13,18 @@ public class DashboardPage extends CommonMethods {
     @FindBy(xpath = "//*[@id=\"welcome-menu\"]/ul/li[3]/a")
     public WebElement logout;
 
-    public DashboardPage(){
+    @FindBy(id = "menu_admin_viewAdminModule")
+    public WebElement dashBoardPageAdminMenu;
+
+    @FindBy(id = "menu_admin_Qualifications")
+    public WebElement qualificationsMenu;
+
+    @FindBy(id = "menu_admin_viewLanguages")
+    public WebElement languages;
+
+
+
+    public DashboardPage() {
         PageFactory.initElements(driver, this);
     }
 }

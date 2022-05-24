@@ -4,6 +4,8 @@ package ui_steps;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import utils.CommonMethods;
 
 import java.util.List;
@@ -36,5 +38,4 @@ public class LoginSteps extends CommonMethods {
             click(dashboardPage.logout);
         });
     }
-
 }

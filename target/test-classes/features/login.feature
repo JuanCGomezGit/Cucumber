@@ -7,7 +7,6 @@ Feature: Login
     Examples:
       | username          | password   | errorMessage             |
       | Admin             | Human      | Invalid credentials      |
-      | william1236000000 | Syntax     | Invalid credentials      |
       | James             |            | Password cannot be empty |
       |                   | Syntax123! | Username cannot be empty |
 
