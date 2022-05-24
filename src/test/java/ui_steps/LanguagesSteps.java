@@ -25,30 +25,23 @@ public class LanguagesSteps extends CommonMethods {
     @Then("user is able to add language {string} successfully")
     public void user_is_able_to_add_language_successfully(String myLanguage) {
         int i = 1;
+        int flag = 1;
         for (WebElement language : languagesPage.listOfLanguages) {
             if (language.getText().equalsIgnoreCase(myLanguage)) {
-                break;
+                for (WebElement checkbox : languagesPage.listOfLanguagesCheckBoxes) {
+                    if (flag == i) {
+                        click(checkbox);
+                        click(languagesPage.deleteLanguageButton);
+                    }
+                    flag++;
+                }
             }
             i++;
         }
-        int flag = 1;
-        for (WebElement checkbox : languagesPage.listOfLanguagesCheckBoxes) {
-            if (flag == i) {
-                click(checkbox);
-                break;
-            }
-            flag++;
-        }
-        click(languagesPage.deleteLanguageButton);
-      //  click(languagesPage.addLanguageButton);
-      //  sendText(languagesPage.languageNameTextBox, myLanguage);
-     //   click(languagesPage.addLanguageButton);
+        click(languagesPage.addLanguageButton);
+        sendText(languagesPage.languageNameTextBox, myLanguage);
+        click(languagesPage.saveLanguageBtn);
 
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
     }
 
 }
