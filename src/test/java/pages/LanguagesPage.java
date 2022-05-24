@@ -11,16 +11,23 @@ import java.util.List;
 public class LanguagesPage extends CommonMethods {
 
     @FindBy(id = "btnAdd")
-    public static WebElement addLanguageButton;
+    public WebElement addLanguageButton;
 
     @FindBy(id = "btnDel")
-    public static WebElement deleteLanguageButton;
+    public WebElement deleteLanguageButton;
 
     @FindBy(xpath = "//table[@id='recordsListTable']/tbody/tr/td[1]")
-    public static List<WebElement> listOfLanguagesCheckBoxes;
+    public List<WebElement> listOfLanguagesCheckBoxes;
 
     @FindBy(xpath = "//table[@id='recordsListTable']/tbody/tr/td[2]")
-    public static List<WebElement> listOfLanguages;
+    public List<WebElement> listOfLanguages;
+
+    @FindBy(id="language_name")
+    public WebElement languageNameTextBox;
+
+
+    @FindBy(id="btnSave")
+    public WebElement saveLanguageBtn;
 
     public LanguagesPage() {
         PageFactory.initElements(driver, this);
